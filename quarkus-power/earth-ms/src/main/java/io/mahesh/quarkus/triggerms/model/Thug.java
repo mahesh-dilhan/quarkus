@@ -6,7 +6,7 @@ import io.smallrye.mutiny.Uni;
 
 import java.util.Random;
 
-@MongoEntity(collection = "villains")
+@MongoEntity(collection = "thugs")
 public class Thug extends ReactivePanacheMongoEntity {
 
     public String name;

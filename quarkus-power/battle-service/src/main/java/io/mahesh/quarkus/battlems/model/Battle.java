@@ -7,7 +7,7 @@ public class Battle {
 
     public Civilian civilian;
 
-    public Villain villain;
+    public Thug thug;
 
     public String winner;
 

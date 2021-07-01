@@ -2,7 +2,7 @@ package io.mahesh.quarkus.battlems;
 
 import io.smallrye.mutiny.Uni;
 import io.mahesh.quarkus.battlems.model.Civilian;
-import io.mahesh.quarkus.battlems.model.Villain;
+import io.mahesh.quarkus.battlems.model.Thug;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.ws.rs.GET;
@@ -20,6 +20,6 @@ public interface EarthClient {
 
     @GET
     @Path("/thug")
-    Uni<Villain> getThug();
+    Uni<Thug> getThug();
 
 }

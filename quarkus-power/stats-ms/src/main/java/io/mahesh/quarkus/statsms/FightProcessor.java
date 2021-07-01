@@ -24,10 +24,10 @@ public class FightProcessor {
     }
 
     private Stats compute(Stats s, Fight f) {
-        if (f.winner.equals(f.hero.name)) {
-            s.wonByHeroes = s.wonByHeroes + 1;
+        if (f.winner.equals(f.civilian.name)) {
+            s.wonByCivilians = s.wonByCivilians + 1;
         } else {
-            s.wonByVillains = s.wonByVillains + 1;
+            s.wonByThugs = s.wonByThugs + 1;
         }
         return s;
     }

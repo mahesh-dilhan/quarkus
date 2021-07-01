@@ -12,7 +12,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.time.Duration;
 
-@Path("/fight")
+@Path("/battle")
 public class FightResource {
 
     @Inject

@@ -2,9 +2,9 @@ package io.mahesh.quarkus.statsms.model;
 
 public class Fight {
 
-    public Hero hero;
+    public Civilian civilian;
 
-    public Villain villain;
+    public Thug thug;
 
     public String winner;
 

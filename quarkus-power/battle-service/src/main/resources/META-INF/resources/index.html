@@ -36,7 +36,7 @@
                     10px 0 25px #0ff;
         }
 
-        .villain-winner {
+        .thug-winner {
             box-shadow:
                     inset 0 0 5px #fff,
                     inset 20px 0 25px #F078C2,
@@ -90,9 +90,9 @@
             <div class="col-sm">
                 <img class="center-block rounded-circle" style="margin-top: 5em" src="vs.png">
             </div>
-            <div class="col-sm battleer battle-villain">
-                <h3 class="text-center bang" id="villain-name"></h3>
-                <img class="center-block rounded-circle" id="villain-image">
+            <div class="col-sm battleer battle-thug">
+                <h3 class="text-center bang" id="thug-name"></h3>
+                <img class="center-block rounded-circle" id="thug-image">
             </div>
         </div>
     </div>
@@ -121,23 +121,23 @@
         $.getJSON("/battle").done((res) => {
             console.log(res);
             const civilian = res.civilian;
-            const hero_image = civilian.image;
-            const villain = res.villain;
-            const villain_image = villain.image;
+            const civilian_image = civilian.image;
+            const thug = res.thug;
+            const thug_image = thug.image;
             const winner = res.winner;
-            const heroHasWon = res.winner === civilian.name;
+            const civilianHasWon = res.winner === civilian.name;
 
             $("#civilian-name").html(civilian.name);
-            $("#thug-name").html(villain.name);
-            $("#thug-image").attr("src", villain_image);
-            $("#civilian-image").attr("src", hero_image);
+            $("#thug-name").html(thug.name);
+            $("#thug-image").attr("src", thug_image);
+            $("#civilian-image").attr("src", civilian_image);
 
-            if (heroHasWon) {
+            if (civilianHasWon) {
                 $(".battle-civilian").addClass("civilian-winner");
                 $(".battle-thug").removeClass("thug-winner")
 
             } else {
-                $(".battle-villain").addClass("thug-winner");
+                $(".battle-thug").addClass("thug-winner");
                 $(".battle-civilian").removeClass("civilian-winner");
             }
 
